@@ -1,41 +1,41 @@
 console.groupCollapsed("Ejercicio 1");
 // Ejercicio 1
-console.log(5+5)
+// console.log(5+5)
 console.groupEnd();
 
 console.groupCollapsed("Ejercicio 2");
 // Ejercicio 2
-console.log(7-2)
+// console.log(7-2)
 console.groupEnd();
 
 console.groupCollapsed("Ejercicio 3");
 // Ejercicio 3
-console.log(5*5)
+// console.log(5*5)
 console.groupEnd();
 
 console.groupCollapsed("Ejercicio 4");
 // Ejercicio 4
-console.log(4/2)
+// console.log(4/2)
 console.groupEnd();
 
 console.groupCollapsed("Ejercicio 5");
 // Ejercicio 5
-console.warn(5%3)
+// console.warn(5%3)
 console.groupEnd();
 
 console.groupCollapsed("Ejercicio 6");
 // Ejercicio 6
-console.log(Math.floor(Math.random()*(10-1+1)+1))
+// console.log(Math.floor(Math.random()*(10-1+1)+1))
 console.groupEnd();
 
 console.groupCollapsed("Ejercicio 7");
 // Ejercicio 7
-console.debug(Math.pow(2,3))
+// console.debug(Math.pow(2,3))
 console.groupEnd();
 
 console.groupCollapsed("Ejercicio 8");
 // Ejercicio 8
-console.error(Math.sqrt(4,2))
+// console.error(Math.sqrt(4,2))
 console.groupEnd();
 
 console.groupCollapsed("Ejercicio 9");
@@ -76,30 +76,30 @@ console.groupEnd();
 
 console.groupCollapsed("Ejercicio 14");
 // Ejercicio 14
-for (let i = 0; i<=11; i++){
-    let multiplicacion5 = i*5;
-    console.log(`${i}. 5*${i} es: ${multiplicacion5}`);
-}
+// for (let i = 0; i<=11; i++){
+//     let multiplicacion5 = i*5;
+//     console.log(`${i}. 5*${i} es: ${multiplicacion5}`);
+// }
 console.groupEnd();
 
 console.groupCollapsed("Ejercicio 15");
 // Ejercicio 15
-let arrayNumerico = [3,7,2]
-console.log(Math.max(...arrayNumerico))
-console.groupEnd();
+// let arrayNumerico = [3,7,2]
+// console.log(Math.max(...arrayNumerico))
+// console.groupEnd();
 
 console.groupCollapsed("Ejercicio 16");
 // Ejercicio 16
-let arrayNumerico2 = [10,20,5]
-console.warn(Math.min(...arrayNumerico2))
+// let arrayNumerico2 = [10,20,5]
+// console.warn(Math.min(...arrayNumerico2))
 console.groupEnd();
 
 console.groupCollapsed("Ejercicio 17");
 // Ejercicio 17
-let suma = 4+6+8
-let promedio = suma/3
-console.error(promedio)
-console.groupEnd();
+// let suma = 4+6+8
+// let promedio = suma/3
+// console.error(promedio)
+// console.groupEnd();
 
 console.groupCollapsed("Ejercicio 18");
 // Ejercicio 18
