@@ -86,7 +86,7 @@ console.groupCollapsed("Ejercicio 15");
 // Ejercicio 15
 // let arrayNumerico = [3,7,2]
 // console.log(Math.max(...arrayNumerico))
-// console.groupEnd();
+console.groupEnd();
 
 console.groupCollapsed("Ejercicio 16");
 // Ejercicio 16
@@ -99,15 +99,16 @@ console.groupCollapsed("Ejercicio 17");
 // let suma = 4+6+8
 // let promedio = suma/3
 // console.error(promedio)
-// console.groupEnd();
+console.groupEnd();
 
 console.groupCollapsed("Ejercicio 18");
 // Ejercicio 18
-for (let i=0; i<=8; i++){
-    let factorial8 =factorial8*8;
-    factorial8
+let num = 5
+let fact = 1
+for (let i = num; i==1; i-=1){
+    let fact1 *= i
 }
-console.log(factorial8)
+console.log(fact1)
 console.groupEnd();
 
 console.groupCollapsed("Ejercicio 19");
