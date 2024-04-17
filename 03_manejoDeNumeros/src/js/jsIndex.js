@@ -63,7 +63,7 @@ function getRandomIntInclusive(min, max) {
     max = Math.floor(max);
     return Math.floor(Math.random() * (max - min + 1) + min);
   }
-document.write(getRandomIntInclusive(50,49))
+document.write(getRandomIntInclusive(1,2))
 
 // opcion dos 
 // const numeroAleatorioEnRango = Math.round(Math.random()*(50-100)+100)
