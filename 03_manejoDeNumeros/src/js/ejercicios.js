@@ -103,127 +103,161 @@ console.groupEnd();
 
 console.groupCollapsed("Ejercicio 18");
 // Ejercicio 18
-let fact5 = 1
+// let fact5 = 1
 
-for (let i = 1; i < 6; i++) {
-    fact5 *= i
-}
-console.log(fact5)
+// for (let i = 1; i < 6; i++) {
+//     fact5 *= i
+// }
+// console.log(fact5)
 console.groupEnd();
 
 console.groupCollapsed("Ejercicio 19");
 // Ejercicio 19
-let roundNumber = 3.6
-console.log(Math.round(roundNumber))
+// let roundNumber = 3.6
+// console.log(Math.round(roundNumber))
 console.groupEnd();
 
 console.groupCollapsed("Ejercicio 20");
 // Ejercicio 20
-let doubleNumber = 9
-console.log(doubleNumber * 2)
+// let doubleNumber = 9
+// console.log(doubleNumber * 2)
 console.groupEnd();
 
 console.groupCollapsed("Ejercicio 21");
 // Ejercicio 21
-let tripleNumber = 4
-console.log(tripleNumber * 3)
+// let tripleNumber = 4
+// console.log(tripleNumber * 3)
 console.groupEnd();
 
 console.groupCollapsed("Ejercicio 22");
 // Ejercicio 22
-let pow6 = 6
-console.warn(Math.pow(pow6, 2))
+// let pow6 = 6
+// console.warn(Math.pow(pow6, 2))
 console.groupEnd();
 
 console.groupCollapsed("Ejercicio 23");
 // Ejercicio 23
-let cube3 = 3
-console.error(Math.pow(cube3, 3))
+// let cube3 = 3
+// console.error(Math.pow(cube3, 3))
 console.groupEnd();
 
 console.groupCollapsed("Ejercicio 24");
 // Ejercicio 24
 
-let resultado = 0
-//               false
-for (let i = 10; i >= 0; i--) {
-    resultado += i;
-}
-console.log(resultado)
+// let resultado = 0
+// //               false
+// for (let i = 10; i >= 0; i--) {
+//     resultado += i;
+// }
+// console.log(resultado)
 console.groupEnd();
 
 console.groupCollapsed("Ejercicio 25");
 // Ejercicio 25
-console.log(50-25)
+// console.log(50-25)
 console.groupEnd();
 
 console.groupCollapsed("Ejercicio 26");
 // Ejercicio 26
-console.warn(7*9)
+// console.warn(7*9)
 console.groupEnd();
 
 console.groupCollapsed("Ejercicio 27");
 // Ejercicio 27
+// console.warn(144*12)
 console.groupEnd();
 
 console.groupCollapsed("Ejercicio 28");
 // Ejercicio 28
+// console.debug(17%4)
 console.groupEnd();
 
 console.groupCollapsed("Ejercicio 29");
 // Ejercicio 29
+// let random = Math.floor(Math.random()*(30-20+1)+20)
+// console.log(random)
 console.groupEnd();
 
 console.groupCollapsed("Ejercicio 30");
 // Ejercicio 30
+// console.error(Math.pow(2,8))
 console.groupEnd();
 
 console.groupCollapsed("Ejercicio 31");
 // Ejercicio 31
+// console.warn(Math.sqrt(144,2))
 console.groupEnd();
 
 console.groupCollapsed("Ejercicio 32");
 // Ejercicio 32
+// let celsius = 100
+// let farenheit = (celsius*1.8)+32
+// console.log(`${celsius} grados celsius es igual a ${farenheit} grados farenheit`)
 console.groupEnd();
 
 console.groupCollapsed("Ejercicio 33");
 // Ejercicio 33
+// console.warn("El area de un rectangulo con base 5 y altura 10 es:",5*10 )
 console.groupEnd();
 
 console.groupCollapsed("Ejercicio 34");
 // Ejercicio 34
+// let perimetroCirculo6 = 2*(Math.PI)*6
+// console.log("El perimetro de un circulo con radio 6 es:", perimetroCirculo6)
 console.groupEnd();
 
 console.groupCollapsed("Ejercicio 35");
 // Ejercicio 35
+// let volumenCubo4 = Math.pow(4,3)
+// console.warn("El volumen de su cubo con lado 4 es:", volumenCubo4)
 console.groupEnd();
 
 console.groupCollapsed("Ejercicio 36");
 // Ejercicio 36
+// let diagonalMayor = 10
+// let diagonalMenor = 8
+// let areaRombo = ((diagonalMayor*diagonalMenor)/(2))
+// console.log(`El area de un rombo con diagonales ${diagonalMayor} y ${diagonalMenor} es: ${areaRombo}`)
 console.groupEnd();
 
 console.groupCollapsed("Ejercicio 37");
 // Ejercicio 37
+// let baseMenor = 6
+// let baseMayor = 10
+// let altura = 4
+// let areaTrapecio = (((baseMayor+baseMenor)/(2))*(altura))
+// console.log(areaTrapecio)
 console.groupEnd();
 
 console.groupCollapsed("Ejercicio 38");
 // Ejercicio 38
+// for(let i = 0; i<11;i++){
+//     console.warn(`${i+1}.${i} veces 8 es:${i*8}`)
+// }
 console.groupEnd();
 
 console.groupCollapsed("Ejercicio 39");
 // Ejercicio 39
+// let arraNumerico = [15,20,25]
+// console.debug("el mayor numero en el array numerico es:",Math.max(...arraNumerico))
 console.groupEnd();
 
 console.groupCollapsed("Ejercicio 40");
 // Ejercicio 40
+// let arraNumerico = [50,75,100]
+// console.debug("El menor numero en el array numerico es:",Math.min(...arraNumerico))
 console.groupEnd();
 
 console.groupCollapsed("Ejercicio 41");
 // Ejercicio 41
+// let suma = 7+9+12
+// let promedio = suma/3
+// console.error("El promedio de los elementos es:", promedio)
 console.groupEnd();
 
 console.groupCollapsed("Ejercicio 42");
 // Ejercicio 42
+for(let i=0; i)
 console.groupEnd();
 
 console.groupCollapsed("Ejercicio 43");
