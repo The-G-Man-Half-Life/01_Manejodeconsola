@@ -103,44 +103,63 @@ console.groupEnd();
 
 console.groupCollapsed("Ejercicio 18");
 // Ejercicio 18
-let num = 5
-let fact = 1
-for (let i = num; i==1; i-=1){
-    let fact1 *= i
+let fact5 = 1
+
+for (let i = 1; i < 6; i++) {
+    fact5 *= i
 }
-console.log(fact1)
+console.log(fact5)
 console.groupEnd();
 
 console.groupCollapsed("Ejercicio 19");
 // Ejercicio 19
+let roundNumber = 3.6
+console.log(Math.round(roundNumber))
 console.groupEnd();
 
 console.groupCollapsed("Ejercicio 20");
 // Ejercicio 20
+let doubleNumber = 9
+console.log(doubleNumber * 2)
 console.groupEnd();
 
 console.groupCollapsed("Ejercicio 21");
 // Ejercicio 21
+let tripleNumber = 4
+console.log(tripleNumber * 3)
 console.groupEnd();
 
 console.groupCollapsed("Ejercicio 22");
 // Ejercicio 22
+let pow6 = 6
+console.warn(Math.pow(pow6, 2))
 console.groupEnd();
 
 console.groupCollapsed("Ejercicio 23");
 // Ejercicio 23
+let cube3 = 3
+console.error(Math.pow(cube3, 3))
 console.groupEnd();
 
 console.groupCollapsed("Ejercicio 24");
 // Ejercicio 24
+
+let resultado = 0
+//               false
+for (let i = 10; i >= 0; i--) {
+    resultado += i;
+}
+console.log(resultado)
 console.groupEnd();
 
 console.groupCollapsed("Ejercicio 25");
 // Ejercicio 25
+console.log(50-25)
 console.groupEnd();
 
 console.groupCollapsed("Ejercicio 26");
 // Ejercicio 26
+console.warn(7*9)
 console.groupEnd();
 
 console.groupCollapsed("Ejercicio 27");
