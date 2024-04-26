@@ -9,7 +9,8 @@ const nombres = ["Mariajose Pino Ortega",
     "Juan Guillermo Ruiz Alvarez",
     "Luisa Fernanda Ramirez Cardona",
     "David Steven Alvarez Urrego",
-    "Juan Esteban Quirama Lopez"]
+    "Juan Esteban Quirama Lopez"
+]
 
 const nombresOrganizados = nombres.sort()
 console.log(nombresOrganizados)
@@ -219,7 +220,7 @@ console.groupEnd();
 
 console.groupCollapsed("Ejercicio 21");
 // Ejercicio 21
-let libros = [
+let libros1 = [
     {titulo:"Don Quijote de la Mancha",creador:"Miguel de Cervantes Saavedra",paginas:863},
     {titulo:"Guerra y Paz",creador:"Lev Tolstói",paginas:1440},
     {titulo:"Cien años de soledad",creador:"Gabriel Garcia Marquez",paginas:422},
@@ -231,15 +232,23 @@ let libros = [
     {titulo:"Ulises",creador:"James Joyce",paginas:730},
     {titulo:"La Odisea",creador:"Homero",paginas:400}
 ]
-let maxPages= Number(500)
-let librosMasDe500Paginas = []
-for(let i = 0;i<=libros.length;i++){
-    if(Number(libros[i].paginas)>maxPages){
-        librosMasDe500Paginas.push(libros[i])
-    }
-}
+let maxPages= 300
+// let librosMasDe500Paginas = []
+// for(let i = 0;i < libros1.length;i++){
+//     if(libros1[i].paginas > maxPages){
+//         console.log("entrando");
+//         librosMasDe500Paginas.push(libros1[i])
+//         console.log("bien",librosMasDe500Paginas);
+//     }
+// }
 
-console.log(librosMasDe500Paginas)
+let librosMasDe500Paginas = libros1.filter((libro)=>{
+    if(libro.paginas>maxPages){
+        return libro
+    }
+})
+
+console.log(librosMasDe500Paginas);
 
 console.groupEnd();
 
@@ -265,29 +274,99 @@ console.groupEnd();
 
 console.groupCollapsed("Ejercicio 24");
 // Ejercicio 24
-
+const nombresDatos = [
+    {nombre:"Mariajose Pino Ortega",edad:18},
+    {nombre:"Johnatan Escobar Molina",edad:38},
+    {nombre:"Sebastian Ortiz Castro",edad:47},
+    {nombre:"Arlex Mauricio Zapata",edad:55},
+    {nombre:"Julian Felipe Forero Villa",edad:31},
+    {nombre:"Herbin Esteban Restrepo Isaza",edad:29},
+    {nombre:"Juan Guillermo Ruiz Alvarez",edad:25},
+    {nombre:"Luisa Fernanda Ramirez Cardona",edad:28},
+    {nombre:"David Steven Alvarez Urrego",edad:57},
+    {nombre:"Juan Esteban Quirama Lopez",edad:23}
+]
+personasMayores = nombresDatos.filter((nombre)=>{
+    if(nombre.edad>18){
+        return nombre
+    }
+})
+console.log(personasMayores)
 console.groupEnd();
 
 console.groupCollapsed("Ejercicio 25");
 // Ejercicio 25
+let booleanos = [
+    true,
+    false,
+    true,
+    true,
+    false,
+    false,
+    false,
+    false,
+]
+
+let booleanosVerdaderos = booleanos.filter((booleano)=>{
+    if(booleano===true){
+        return booleano
+    }
+})
+console.log(booleanosVerdaderos)
 console.groupEnd();
 
 console.groupCollapsed("Ejercicio 26");
 // Ejercicio 26
+let numeros2AlCuadrado = numeros2.map((numero)=>{
+    let numeroAlCuadrado = Math.pow(numero,2)
+    return numeroAlCuadrado
+})
+console.log(numeros2AlCuadrado)
 console.groupEnd();
 
 console.groupCollapsed("Ejercicio 27");
 // Ejercicio 27
+let nombresEnMayuscula = nombres.map((nombre)=>{
+    let nombreMayuscula = nombre.toUpperCase()
+    return nombreMayuscula
+})
+console.log(nombresEnMayuscula);
 console.groupEnd();
 
 console.groupCollapsed("Ejercicio 28");
 // Ejercicio 28
+let productos = [
+    {nombre:"mantequilla",precio:5000},
+    {nombre:"Azucar",precio:3000},
+    {nombre:"Panela",precio:10000},
+    {nombre:"Aguacate",precio:2000},
+    {nombre:"Mazorca",precio:2500},
+    {nombre:"Tequila",precio:555000},
+    {nombre:"Guaro",precio:500000},
+    {nombre:"Ron",precio:235000},
+]
+let precioDeProductos = productos.map((producto)=>{
+    let precioProducto = producto.precio
+    return precioProducto
+})
+console.log(precioDeProductos)
 console.groupEnd();
 
 console.groupCollapsed("Ejercicio 29");
 // Ejercicio 29
+nombresPersonas = nombresDatos.map((nombre)=>{
+    let nombreSolo = nombre.nombre
+    return nombreSolo
+})
+console.log(nombresPersonas)
 console.groupEnd();
 
 console.groupCollapsed("Ejercicio 30");
 // Ejercicio 30
+let numerosRaizCuadrada = numeros2AlCuadrado.map((numero)=>{
+    let numeroRaizCuadrada = Math.sqrt(numero,2)
+    let numeroRaizCuadrada2 = numeroRaizCuadrada.toFixed(2)
+    return numeroRaizCuadrada2
+})
+console.log(numerosRaizCuadrada);
 console.groupEnd();
