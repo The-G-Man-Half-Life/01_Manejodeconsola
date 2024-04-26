@@ -213,25 +213,32 @@ console.groupEnd();
 
 console.groupCollapsed("Ejercicio 20");
 // Ejercicio 20
-let verificacionVocal = nombres.every((nombre)=>nombre.includes("a"||"A"||"e"||"E"||"i"||"I"||"o"||"O"||"u"||"U"))
-console.log(verificacionVocal)
+// let verificacionVocal = nombres.every((nombre)=>nombre.includes("a"||"A"||"e"||"E"||"i"||"I"||"o"||"O"||"u"||"U"))
+// console.log(verificacionVocal)
 console.groupEnd();
 
 console.groupCollapsed("Ejercicio 21");
 // Ejercicio 21
-let libros = {
-    "Don Quijote de la Mancha":["Miguel de Cervantes Saavedra",863],
-    "Guerra y Paz":["Lev Tolstói",1440],
-    "Cien años de soledad":["Gabriel Garcia Marquez",422],
-    "Mody Dick":["Herman Melville",720],
-    "El señor de los anillos: La cominidad del anillo":["J.R.R. Tolkien",458],
-    "Anna Karenina":["Lev Tolstói",864],
-    "En busca del tiempo perdido":["Marcel Proust",400],
-    "El gran Gatsby":["F. Scottt Fitzgerald",180],
-    "Ulises":["James Joyce",730],
-    "La Odisea":["Homero",400]
+let libros = [
+    {titulo:"Don Quijote de la Mancha",creador:"Miguel de Cervantes Saavedra",paginas:863},
+    {titulo:"Guerra y Paz",creador:"Lev Tolstói",paginas:1440},
+    {titulo:"Cien años de soledad",creador:"Gabriel Garcia Marquez",paginas:422},
+    {titulo:"Mody Dick",creador:"Herman Melville",paginas:720},
+    {titulo:"El señor de los anillos: La cominidad del anillo",creador:"J.R.R. Tolkien",paginas:458},
+    {titulo:"Anna Karenina",creador:"Lev Tolstói",paginas:864},
+    {titulo:"En busca del tiempo perdido",creador:"Marcel Proust",paginas:400},
+    {titulo:"El gran Gatsby",creador:"F. Scottt Fitzgerald",paginas:180},
+    {titulo:"Ulises",creador:"James Joyce",paginas:730},
+    {titulo:"La Odisea",creador:"Homero",paginas:400}
+]
+let maxPages= Number(500)
+let librosMasDe500Paginas = []
+for(let i = 0;i<=libros.length;i++){
+    if(Number(libros[i].paginas)>maxPages){
+        librosMasDe500Paginas.push(libros[i])
+    }
 }
-let librosMasDe500Paginas = Object.entries(libros).filter(([libro,detalles])=>detalles[1]>500)
+
 console.log(librosMasDe500Paginas)
 
 console.groupEnd();
@@ -248,11 +255,17 @@ console.groupEnd();
 
 console.groupCollapsed("Ejercicio 23");
 // Ejercicio 23
-
+let nombresLongitudMayor5 = nombres.filter((nombre)=>{
+    if(nombre.length>5){
+        return nombre
+    }
+})
+console.log(nombresLongitudMayor5)
 console.groupEnd();
 
 console.groupCollapsed("Ejercicio 24");
 // Ejercicio 24
+
 console.groupEnd();
 
 console.groupCollapsed("Ejercicio 25");
