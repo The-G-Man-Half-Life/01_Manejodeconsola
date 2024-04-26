@@ -147,11 +147,11 @@ console.groupEnd();
 
 console.groupCollapsed("Ejercicio 13");
 // Ejercicio 13
-function arrayToReversed(array) {
-    let arrayReversado = array.toReversed()
-    console.log(arrayReversado)
-}
-arrayToReversed(nombres)
+// function arrayToReversed(array) {
+//     let arrayReversado = array.toReversed()
+//     console.log(arrayReversado)
+// }
+// arrayToReversed(nombres)
 console.groupEnd();
 
 console.groupCollapsed("Ejercicio 14");
@@ -180,35 +180,75 @@ console.groupEnd();
 
 console.groupCollapsed("Ejercicio 16");
 // Ejercicio 16
-mencion
+nombres.forEach((nombre)=>{
+    console.log(nombre)
+})
 console.groupEnd();
 
 console.groupCollapsed("Ejercicio 17");
 // Ejercicio 17
+nombresLongitud = nombres.map((nombre)=>{
+    let nombreLongitud = nombre.length
+    return nombreLongitud
+})
+console.log(nombresLongitud)
 console.groupEnd();
 
 console.groupCollapsed("Ejercicio 18");
 // Ejercicio 18
+nombreConLetraA = nombres.filter((nombreA)=>{
+    if(nombreA.includes("a")==true){
+        return nombreA
+    }
+})
+console.log(nombreConLetraA)
 console.groupEnd();
 
 console.groupCollapsed("Ejercicio 19");
 // Ejercicio 19
+let verificacionLongitud = nombres.some(nombres=>nombres.length>10)
+
+console.log(verificacionLongitud)
 console.groupEnd();
 
 console.groupCollapsed("Ejercicio 20");
 // Ejercicio 20
+let verificacionVocal = nombres.every((nombre)=>nombre.includes("a"||"A"||"e"||"E"||"i"||"I"||"o"||"O"||"u"||"U"))
+console.log(verificacionVocal)
 console.groupEnd();
 
 console.groupCollapsed("Ejercicio 21");
 // Ejercicio 21
+let libros = {
+    "Don Quijote de la Mancha":["Miguel de Cervantes Saavedra",863],
+    "Guerra y Paz":["Lev Tolstói",1440],
+    "Cien años de soledad":["Gabriel Garcia Marquez",422],
+    "Mody Dick":["Herman Melville",720],
+    "El señor de los anillos: La cominidad del anillo":["J.R.R. Tolkien",458],
+    "Anna Karenina":["Lev Tolstói",864],
+    "En busca del tiempo perdido":["Marcel Proust",400],
+    "El gran Gatsby":["F. Scottt Fitzgerald",180],
+    "Ulises":["James Joyce",730],
+    "La Odisea":["Homero",400]
+}
+let librosMasDe500Paginas = Object.entries(libros).filter(([libro,detalles])=>detalles[1]>500)
+console.log(librosMasDe500Paginas)
+
 console.groupEnd();
 
 console.groupCollapsed("Ejercicio 22");
 // Ejercicio 22
+let numerosDivisiblesPor3 = numeros2.filter((numero)=>{
+    if(numero%3 == 0){
+        return numero
+    }
+})
+console.log(numerosDivisiblesPor3)
 console.groupEnd();
 
 console.groupCollapsed("Ejercicio 23");
 // Ejercicio 23
+
 console.groupEnd();
 
 console.groupCollapsed("Ejercicio 24");
