@@ -111,7 +111,8 @@ let mascotas = [
 
     {
         nombre: "Daisy",
-        especie: "Hurón", raza: "Hurón europeo"
+        especie: "Hurón",
+        raza: "Hurón europeo"
         , edad: 3
         , peso: 8,
         estado: "critico",
@@ -244,16 +245,16 @@ Escriba el numero de la opcion que describa el estado de su mascota`))
 function VerListaMascotasRegistradas(listaDeMascotas) {
     listaDeMascotas.forEach((ubicacionMascota) => {
         console.log(
-            `Nombre: ${ubicacionMascota.nombre}
-Especie: ${ubicacionMascota.especie}
-Raza: ${ubicacionMascota.raza}
-Edad: ${ubicacionMascota.edad}
-Peso: ${ubicacionMascota.peso}
-Estado: ${ubicacionMascota.estado}
-Nombre del propietario: ${ubicacionMascota["nombre propietario"]}
-Documento del dueño: ${ubicacionMascota["documento del dueño"]}
-Telefono de contacto: ${ubicacionMascota["telefono de contacto"]}
-Correo del propietario: ${ubicacionMascota["correo del propietario"]}
+            `nombre: ${ubicacionMascota.nombre}
+especie: ${ubicacionMascota.especie}
+raza: ${ubicacionMascota.raza}
+edad: ${ubicacionMascota.edad}
+peso: ${ubicacionMascota.peso}
+estado: ${ubicacionMascota.estado}
+nombre propietario: ${ubicacionMascota["nombre propietario"]}
+documento del dueño: ${ubicacionMascota["documento del dueño"]}
+telefono de contacto: ${ubicacionMascota["telefono de contacto"]}
+correo del propietario: ${ubicacionMascota["correo del propietario"]}
 `)
     })
 }
@@ -269,75 +270,178 @@ function BuscarMascotaPorElNombre(listaDeMascotas) {
     let mascotaBuscada = String(prompt("Ingrese el nombre de la mascota que desee encontrar"))
 
     let verificacionDeExcistencia = listaDeMascotas.some((mascota) => {
-            return mascota.nombre == mascotaBuscada
-            })
+        return mascota.nombre == mascotaBuscada
+    })
 
-    if(verificacionDeExcistencia == true){
-        let datosMascota = listaDeMascotas.find(mascota=>
-           mascota.nombre == mascotaBuscada)
-        console.log("La mascota se encuentra en nuestra lista de mascotas con los siguientes datos:",datosMascota)
+    if (verificacionDeExcistencia == true) {
+        let datosMascota = listaDeMascotas.find(mascota =>
+            mascota.nombre == mascotaBuscada)
+        console.log("La mascota se encuentra en nuestra lista de mascotas con los siguientes datos:", datosMascota)
     }
 
-    else{
-        console.log("La mascota:",mascotaBuscada, "no se encuentra en nuestra lista de mascotas")
+    else {
+        console.log("La mascota:", mascotaBuscada, "no se encuentra en nuestra lista de mascotas")
     }
 }
 
 function FiltrarYMostrarMascotasMismoDueño(listaDeMascotas) {
     let nombreDelDueñoDeLaMascota = String(prompt("Ingrese el nombre de la persona para conocer que mascotas posee"))
-    let verificacionExistenciaPersona = listaDeMascotas.some((dueño) => {return dueño["nombre propietario"]==nombreDelDueñoDeLaMascota})
+    let verificacionExistenciaPersona = listaDeMascotas.some((dueño) => { return dueño["nombre propietario"] == nombreDelDueñoDeLaMascota })
 
-    if(verificacionExistenciaPersona == true){
-        let mascotasDelDueño = listaDeMascotas.filter((ubicacionMascota)=>{
+    if (verificacionExistenciaPersona == true) {
+        let mascotasDelDueño = listaDeMascotas.filter((ubicacionMascota) => {
             return ubicacionMascota["nombre propietario"] == nombreDelDueñoDeLaMascota
         })
         console.log(mascotasDelDueño)
     }
-    else{
+    else {
         console.log("El dueño no existe")
     }
 }
 
-function actualizarInformacionMascotaExistente(listaDeMascotas){
 
-    function actualizarInfo(listaDeMascotas) {
-        let nombreMascota = String(prompt("Ingrese el nombre de la mascota"))
-        let verificacionExistenciaMascota = listaDeMascotas.some((dueño) => {return dueño["nombre propietario"]==nombreDelDueñoDeLaMascota})
 
-        if (verificacionExistenciaMascota==true){
-            let indiceMascota = listaDeMascotas.findIndex(mascota => mascota.nombre ==nombreMascota)
+// let opcion = String(prompt("¿Desea ver la lista de mascotas?(si/no)"))
+// let opcionAlt = opcion.toLowerCase()
+
+// if (opcionAlt == "si") {
+//     VerListaDeLosDueños(mascotas)
+
+//     let seguirProceso = String(prompt("Desea continuar el proceso(si/no)"))
+//     let seguirProcesoAlt = seguirProceso.toLowerCase()
+
+//     if (seguirProcesoAlt == "no") {
+
+//     }
+//     else {
+
+//     }
+
+// }
+
+function actualizarInformacionMascotaExistente(listaDeMascotas) { }
+
+function actualizarInfo(listaDeMascotas) {
+    let nombreMascota = String(prompt("Ingrese el nombre de la mascota"))
+    let verificacionExistenciaMascota = listaDeMascotas.some((mascota) => { return mascota.nombre == nombreMascota })
+
+    if (verificacionExistenciaMascota == true) {
+
+            let indiceMascota = listaDeMascotas.findIndex(mascota => mascota.nombre == nombreMascota)
 
             let informacionACambiar = Number(prompt(`Ingrese el numero que corresponda a la informacion que desea cambiar:
-            1. Especie
-            2. Raza
-            3. Edad
-            4. peso
-            5. Estado
-            6. Nombre Del Propietario
-            `))
-        }
-        else{
-            console.log("La mascota no existe")
-            break
-        }
+                0. Nombre
+                1. Especie
+                2. Raza
+                3. Edad
+                4. peso
+                5. Estado
+                6. Nombre del propietario
+                7. Documento del dueño
+                8. Telefono de contacto
+                9. Correo del propietario`))
+
+            switch (informacionACambiar) {
+
+                case 0:
+
+                    let nuevoValorNombre = String(prompt("Ingrese el nuevo nombre de la mascota"))
+                    listaDeMascotas[indiceMascota].nombre = nuevoValorNombre
+                    break;
+
+                case 1:
+
+                    let nuevoValorEspecie = String(prompt("Ingrese la nueva especie de la mascota"))
+                    listaDeMascotas[indiceMascota].especie = nuevoValorEspecie
+                    break;
+
+
+                case 2:
+
+                    let nuevoValorRaza = String(prompt("Ingrese la nueva raza de la mascota"))
+                    listaDeMascotas[indiceMascota].raza = nuevoValorRaza
+                    break;
+
+
+                case 3:
+
+                    let registrarEdad = () => {
+                        let fechaNacimiento = prompt(`Ingrese la fecha de nacimiento de su mascota en el formato:
+                    YYYY/MM/DD`)
+                        let fechaNacimientoDate = new Date(fechaNacimiento).getFullYear()
+                        let fechaActual = new Date().getFullYear()
+                        let edad = Math.abs(fechaActual - fechaNacimientoDate)
+                        return edad
+                    }
+                    let registrarEdadReturn = registrarEdad()
+                    listaDeMascotas[indiceMascota].edad = registrarEdadReturn
+                    break;
+
+
+                case 4:
+
+                    let nuevoValorPeso = Number(prompt("Ingrese el numero correspondiente al valor de peso de su mascota"))
+                    listaDeMascotas[indiceMascota].peso = nuevoValorPeso
+                    break;
+
+
+                case 5:
+
+                    let registrarEstado = () => {
+                        let estadoMascota = Number(prompt(
+`1.Estable
+2.Critico
+Escriba el numero de la opcion que describa el estado de su mascota`))
+                        if (estadoMascota == 1) {
+                            return "Estable"
+                        }
+                        else {
+                            return "critico"
+                        }
+                    }
+
+                        let registrarEstadoReturn1 = registrarEstado()
+
+                    listaDeMascotas[indiceMascota].registrarEstadoReturn1
+                    break;
+
+
+                case 6:
+
+                    let nuevoValorNombrePropietario = String(prompt("Ingrese el nuevo nombre del propietario"))
+                    listaDeMascotas[indiceMascota]["nombre propietario"] = nuevoValorNombrePropietario
+                    break;
+
+
+                case 7:
+
+                    let nuevoValorDocumentoDelDueño = Number(prompt("Ingrese el nuevo documento del dueño"))
+                    listaDeMascotas[indiceMascota]["documento del dueño"] = nuevoValorDocumentoDelDueño
+                    break;
+
+                case 8:
+
+                    let nuevoValorTelefonoDeContacto = String(prompt("Ingrese el nuevo telefono de contacto"))
+                    listaDeMascotas[indiceMascota]["telefono de contacto"] = nuevoValorTelefonoDeContacto
+                    break;
+
+                case 9:
+
+                    let nuevoValorCorreoDelPropietario = String(prompt("Ingrese la nueva raza de la mascota"))
+                    listaDeMascotas[indiceMascota]["correo del propietario"] = nuevoValorCorreoDelPropietario
+                    break;
+
+                default:
+                    console.log("El valor escrito no corresponde a ninguna opcion")
+                    break;
+            }
+
     }
-
-    let opcion = String(prompt("¿Desea ver la lista de mascotas?(si/no)"))
-    let opcionAlt = opcion.toLowerCase()
-
-    if (opcionAlt== "si"){
-        VerListaDeLosDueños(mascotas)
-
-        let seguirProceso = String(prompt("Desea continuar el proceso(si/no)"))
-        let seguirProcesoAlt = seguirProceso.toLowerCase()
-
-        if(seguirProcesoAlt=="no"){
-            break
-        }
-        else{
-
-        }
-
+    else {
+        console.log("La mascota no existe")
     }
-    
 }
+
+
+actualizarInfo(mascotas)
+console.log(mascotas)
