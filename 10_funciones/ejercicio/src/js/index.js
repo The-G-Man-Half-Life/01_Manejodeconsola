@@ -9,7 +9,7 @@ let mascotas = [
         nombre: "Luna",
         especie: "Perro",
         raza: "Pastor Belga Malinois",
-        edad: new Date('2021/01/10'),
+        edad: 5,
         peso: 25,
         estado: "Estable",
         "nombre propietario": "María García",
@@ -22,7 +22,7 @@ let mascotas = [
         nombre: "Max",
         especie: "Gato",
         raza: "Sphynx",
-        edad: new Date('2019/03/15'),
+        edad: 6,
         peso: 7,
         estado: "Critico",
         "nombre propietario": "Alejandro Martínez",
@@ -35,7 +35,8 @@ let mascotas = [
         nombre: "Bella",
         especie: "Conejo",
         raza: "Angora",
-        edad: new Date('2022/07/20'), peso: 4,
+        edad: 3, 
+        peso: 4,
         estado: "Estable",
         "nombre propietario": "Sofía Rodríguez",
         "documento del dueño": 3344556677,
@@ -47,7 +48,7 @@ let mascotas = [
         nombre: "Rocky",
         especie: "Hurón",
         raza: "Hurón de patas negras",
-        edad: new Date('2023/04/05'),
+        edad: 2,
         peso: 12,
         estado: "Critico",
         "nombre propietario": "Carlos López",
@@ -60,7 +61,7 @@ let mascotas = [
         nombre: "Coco",
         especie: "Perico",
         raza: "Cotorra Argentina",
-        edad: new Date('2020/09/30'),
+        edad: 4,
         peso: 0.5,
         estado: "Estable",
         "nombre propietario": "Ana Pérez",
@@ -73,7 +74,7 @@ let mascotas = [
         nombre: "Simba",
         especie: "Serpiente",
         raza: "Pitón real",
-        edad: new Date('2018/11/25'),
+        edad: 7,
         peso: 3,
         estado: "Critico",
         "nombre propietario": "Juan Hernández",
@@ -86,7 +87,7 @@ let mascotas = [
         nombre: "Lola",
         especie: "Cerdo",
         raza: "Mini cerdo Vietnamita",
-        edad: new Date('2023/02/12'),
+        edad: 6,
         peso: 15,
         estado: "Estable",
         "nombre propietario": "Laura Díaz",
@@ -99,7 +100,7 @@ let mascotas = [
         nombre: "Toby",
         especie: "Tortuga",
         raza: "Tortuga de orejas rojas",
-        edad: new Date('2016/08/08'),
+        edad: 3,
         peso: 2,
         estado: "Critico",
         "nombre propietario": "Pablo Gómez",
@@ -111,7 +112,7 @@ let mascotas = [
     {
         nombre: "Daisy",
         especie: "Hurón", raza: "Hurón europeo"
-        , edad: new Date('2022/05/03')
+        , edad: 3
         , peso: 8,
         estado: "critico",
         "nombre propietario": "Andrea Ruiz",
@@ -124,7 +125,7 @@ let mascotas = [
         nombre: "Charlie",
         especie: "Conejo"
         , raza: "Conejo Cabeza de león"
-        , edad: new Date('2021/12/18')
+        , edad: 2
         , peso: 6,
         estado: "critico"
         , "nombre propietario": "David Fernández",
@@ -238,6 +239,27 @@ let mascotanueva = {
 }
 listaDeMascotas.push(mascotanueva)
 }
-registrarMascota(mascotas)
 
-console.log(mascotas)
+
+function VerListaMascotasRegistradas(listaDeMascotas) {
+    listaDeMascotas.forEach((ubicacionMascota)=>{
+        console.log(
+`Nombre: ${ubicacionMascota.nombre}
+Especie: ${ubicacionMascota.especie}
+Raza: ${ubicacionMascota.raza}
+Edad: ${ubicacionMascota.edad}
+Peso: ${ubicacionMascota.peso}
+estado: ${ubicacionMascota.estado}
+Nombre del propietario: ${ubicacionMascota["nombre propietario"]}
+Documento del dueño: ${ubicacionMascota["documento del dueño"]}
+Telefono de contacto: ${ubicacionMascota["telefono de contacto"]}
+Correo del propietario: ${ubicacionMascota["correo del propietario"]}
+`)
+    })
+}
+
+function VerListaDeLosDueños(listaDeMascotas) {
+    listaDeMascotas.forEach((ubicacionMascota)=>{
+        console.log(`La mascota: ${ubicacionMascota.nombre} le pertenece al dueño: ${ubicacionMascota["nombre propietario"]}`)
+    })
+}
